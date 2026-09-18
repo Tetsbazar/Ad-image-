@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ধরুনের ফ্রেশ ফ্রুট শপ</title>
     <style>
-        /* বেসিক স্টাইল */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -14,7 +13,6 @@
             color: #333;
         }
 
-        /* হেডার বা উপরের অংশ */
         header {
             background: linear-gradient(135deg, #4CAF50, #8BC34A);
             color: white;
@@ -28,100 +26,101 @@
             font-size: 2.5em;
         }
 
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2em;
-        }
-
-        /* মেইন কন্টেইনার */
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 40px auto;
-            background: white;
             padding: 30px;
+            background: white;
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            text-align: center;
         }
 
-        /* ছবির স্টাইল (photo.png এর জন্য) */
-        .shop-image {
+        /* মেইন ছবি */
+        .main-image {
             width: 100%;
-            max-width: 500px;
-            height: auto;
+            max-width: 600px;
             border-radius: 15px;
             border: 5px solid #FF9800;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* একাধিক ছবির গ্যালারি */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #4CAF50;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
         }
 
         h2 {
             color: #E65100;
-            font-size: 2em;
-            margin-bottom: 10px;
+            text-align: center;
         }
 
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        /* বাটন স্টাইল */
         .order-btn {
-            display: inline-block;
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
             background-color: #FF9800;
             color: white;
             padding: 15px 30px;
             font-size: 1.2em;
             text-decoration: none;
             border-radius: 50px;
-            margin-top: 20px;
-            transition: background 0.3s;
-        }
-
-        .order-btn:hover {
-            background-color: #F57C00;
-        }
-
-        /* ফুটার */
-        footer {
             text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-    <!-- হেডার -->
     <header>
-        <h1> ধরুনের ফ্রেশ ফ্রুট শপ 🍏</h1>
+        <h1>🍏 ধরুনের ফ্রেশ ফ্রুট শপ</h1>
         <p>সেরা মানের তাজা ও অর্গানিক ফল</p>
     </header>
 
-    <!-- মেইন কন্টেন্ট -->
     <div class="container">
         <h2>আমাদের দোকানে স্বাগতম!</h2>
         
-        <!-- এখানে আপনার ছবি (photo.png) যুক্ত করা হয়েছে -->
-        <img src="photo.png" alt="ধরুনের ফ্রুট শপ" class="shop-image">
+        <!-- মেইন ছবি (photo.png) -->
+        <img src="photo.png" alt="ধরুনের ফ্রুট শপ" class="main-image">
         
-        <p>
-            আমরা সবসময় গ্রাহকদের কাছে পৌঁছে দিই একদম বাগান থেকে তোলা তাজা ফল। 
-            আমাদের কাছে পাবেন মৌসুমের সেরা সব ফল, যেমন- আম, কাঠাল, লিচু, আপেল, কমলা এবং আরও অনেক কিছু। 
-            স্বাস্থ্যকর জীবনের জন্য আজই অর্ডার করুন!
+        <p style="text-align: center; font-size: 1.1em;">
+            আমরা সবসময় গ্রাহকদের কাছে পৌঁছে দিই একদম বাগান থেকে তোলা তাজা ফল।
         </p>
+
+        <!-- একাধিক ছবির গ্যালারি -->
+        <h2> আমাদের ফলের সংগ্রহ</h2>
+        
+        <div class="gallery">
+            <!-- নতুন ছবি ১ -->
+            <img src="photo2.png" alt="ফল ১">
+            
+            <!-- নতুন ছবি ২ -->
+            <img src="mango.jpg" alt="আম">
+            
+            <!-- নতুন ছবি ৩ -->
+            <img src="apple.jpg" alt="আপেল">
+            
+            <!-- নতুন ছবি ৪ -->
+            <img src="photo3.png" alt="ফল ৪">
+        </div>
 
         <a href="#" class="order-btn">🛒 এখনই অর্ডার করুন</a>
     </div>
-
-    <!-- ফুটার -->
-    <footer>
-        <p>&copy; ২০২৬ ধরুনের ফ্রেশ ফ্রুট শপ | সর্বস্বত্ব সংরক্ষিত</p>
-    </footer>
 
 </body>
 </html>
